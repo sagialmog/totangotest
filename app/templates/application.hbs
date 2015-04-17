@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<div class="row">
-		<h1>Wacky Media Player</h1>
+		<h1 {{action 'home'}} id="logo">Wacky Media Player</h1>
 		<div id="search-bar">
 			<div class="input-group">
 				 {{input id="search-input" type="text" class="form-control input-lg" valueBinding="controller.querystr"  placeholder="serch some youtube videos"}}

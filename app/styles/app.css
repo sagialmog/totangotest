@@ -2,8 +2,13 @@
 	  margin: 0 auto;
 	  padding: 15px;
 	  max-width: 1000px;
-    color: #555555
+    color: #555555;
+    font-family: 'Alef', sans-serif;
   }
+
+#logo{
+  cursor: pointer;;
+} 
 #search-bar {
   position: relative;
   z-index: 1;
@@ -12,6 +17,9 @@
   display: block;
   box-shadow: 3px 3px 0 #ccc;
   border-radius: 7px;
+}
+.results-title{
+  text-align: center;
 }
 
 

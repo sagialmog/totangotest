@@ -4,6 +4,9 @@ export default Ember.Controller.extend({
  actions:{
   search:function(){
        this.transitionToRoute('results', this.get('querystr'));
+  },
+  home:function(){
+   	this.transitionToRoute('index');
    }
  }
 });
