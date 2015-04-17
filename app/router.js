@@ -6,4 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  this.route('results', { path: '/results/:query_str' });
+  this.route('videos', { path: '/videos/:video_id' });
 });

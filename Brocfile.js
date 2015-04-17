@@ -4,6 +4,20 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
+isProduction = EmberApp.env() === 'production';
+
+if ( !isProduction ) {
+     app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
+     app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css');
+     app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css.map');
+     app.import(app.bowerDirectory + '/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
+  		destDir: 'fonts'
+	 });
+	app.import(app.bowerDirectory + '/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2', {
+  		destDir: 'fonts'
+	 });
+}
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
@@ -16,5 +30,6 @@ var app = new EmberApp();
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
+
 
 module.exports = app.toTree();

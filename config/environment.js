@@ -5,6 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'totangotest',
     environment: environment,
     baseURL: '/',
+    youtubeApiURL: 'https://www.googleapis.com/youtube/v3',
+    youtubeApiKey:'AIzaSyCeF6B4F5kDd219G3tYN21Ch8sE4P6Ba7k',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -16,6 +18,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+     contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline 'unsafe-eval'",
+      'font-src': "'self'",
+      'connect-src': "*",
+      'img-src': "*",
+      'style-src': "'self' 'unsafe-inline'",
+      'media-src': "'self'"
     }
   };
 
