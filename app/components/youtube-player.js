@@ -1,4 +1,5 @@
 import Ember from "ember";
+import config from '../config/environment';
 
 export default Ember.Component.extend({
  	 tagName:'iframe',
@@ -6,7 +7,7 @@ export default Ember.Component.extend({
  	 frameborder:0,
 	 src: function() {
 	    var vidId = this.get('videoId');
-	    return "http://www.youtube.com/embed/" + vidId;
+	    return config.youtubeEmbedURL + "/" + vidId;
 	  }.property()
 
 

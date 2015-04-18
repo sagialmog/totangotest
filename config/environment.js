@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     youtubeApiURL: 'https://www.googleapis.com/youtube/v3',
+    youtubeEmbedURL: "http://www.youtube.com/embed",
     youtubeApiKey:'AIzaSyCeF6B4F5kDd219G3tYN21Ch8sE4P6Ba7k',
     locationType: 'auto',
     EmberENV: {
@@ -20,12 +21,12 @@ module.exports = function(environment) {
       // when it is created
     },
      contentSecurityPolicy: {
-      'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline 'unsafe-eval'",
-      'font-src': "'self'",
+      'default-src': "*",
+      'script-src': "*",
+      'font-src': "*",
       'connect-src': "*",
       'img-src': "*",
-      'style-src': "'self' 'unsafe-inline'",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
       'media-src': "'self'"
     }
   };

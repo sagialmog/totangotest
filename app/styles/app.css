@@ -3,12 +3,14 @@
 	  padding: 15px;
 	  max-width: 1000px;
     color: #555555;
-    font-family: 'Alef', sans-serif;
+    font-family: 'Alef', sans-serif;  
+    height: 100%;
   }
 
 #logo{
   cursor: pointer;;
-} 
+}
+
 #search-bar {
   position: relative;
   z-index: 1;
@@ -17,6 +19,14 @@
   display: block;
   box-shadow: 3px 3px 0 #ccc;
   border-radius: 7px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.5s 0.3s
+}
+
+#search-bar.in{
+  transform: translateY(0px);
+  opacity: 1;
 }
 .results-title{
   text-align: center;
