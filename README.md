@@ -2,8 +2,8 @@
 
 This is a small ember applicaiton using emberjs , Ember cli and some youTube API.
 You can serach videos on youTube , play them and create your own playlist.
-Also playlist will be fetch from cache ( localStorage ) any time you will be enter to the application.
-Also the app design is fully support desktop, tablet and mobile.
+Also playlist will be fetch from cache ( localStorage ) any time you will be enter to the application. 
+The app design is fully support desktop, tablet and mobile.
 
 
 #Demo
