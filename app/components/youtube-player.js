@@ -8,7 +8,7 @@ export default Ember.Component.extend({
 	 src: function() {
 	    var vidId = this.get('videoId');
 	    return config.youtubeEmbedURL + "/" + vidId;
-	  }.property()
+	  }.property('videoId')
 
 
 });

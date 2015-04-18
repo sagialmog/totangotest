@@ -1,7 +1,33 @@
 <div class="row video-content">
-	<div class="videoWrapper">
-		{{youtube-player videoId=model.id}}
-	</div>
+    {{#if playList.length}}
+                <div class="col-sm-3">
+                  <h3 class="center-title">My playlist</h3>
+                  {{#each video in playList}}
+
+			            <div class="card">
+			                <div class="content">
+			                    <p>{{video.title}}</p>
+			                    <p class="center-title">{{#link-to 'videos' video class="btn btn-danger "}}<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Watch {{/link-to}}
+			                    </p>
+			                </div>
+			            </div>
+					{{/each}}
+                </div>
+        <div class="col-sm-9">
+			<div class="videoWrapper">
+				{{youtube-player videoId=model.id}}
+			</div>
+        </div>
+
+    {{else}}
+    <div class="col-sm-12">
+        <div class="videoWrapper">
+			{{youtube-player videoId=model.id}}
+		</div>
+    </div>
+
+
+    {{/if}}
 
 </div>
 
