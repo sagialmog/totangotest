@@ -23,6 +23,7 @@ export default Ember.Route.extend({
   model: function( params ){
   	var url = config.youtubeApiURL + "/search?key="+ config.youtubeApiKey + "&part=snippet&maxResults=10&q=" + params['query_str'];
   	var selfController = this.controllerFor('results');
+    selfController.set('querystr' , params['query_str']);
     return $.getJSON(url).then(
       function(data) {
         var mergedData = [];
@@ -40,7 +41,9 @@ export default Ember.Route.extend({
             else{
               video = selfController.get('playList').filterProperty('id' , item.id.videoId)[0];
             }
-            mergedData.pushObject(video);
+            if (video.id !== undefined){
+                mergedData.pushObject(video);    
+            }
         });
         return mergedData;
       }

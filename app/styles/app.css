@@ -7,8 +7,15 @@
     height: 100%;
   }
 
+.btn-default:hover{
+  background-color:#d9534f;
+}
+
 #logo{
-  cursor: pointer;;
+  cursor: pointer;
+  color:#d9534f;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #search-bar {
@@ -43,9 +50,11 @@
   border: 1px solid #CCC;
   border-radius: 8px;
   padding: 0;
-  background-color: #284c79;
   color: rgb(136, 172, 217);
   margin-bottom: 15px;
+}
+.card:hover{
+    background-color: #284c79;
 }
 
 .card .content{
