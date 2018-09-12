@@ -8,7 +8,7 @@ The app design is fully support desktop, tablet and mobile.
 
 #Demo
 A demo application can be found at the following URL-
-http://totango-test.heroku.com
+http://totango-test.herokuapp.com
 
 ## Prerequisites
 
